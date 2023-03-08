@@ -1,0 +1,203 @@
+/*---------------------Variables-----------------------*/
+
+:root {
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(103, 58, 183);
+    --pink: rgb(243, 143, 177);
+    --divText: #FAFAFA;
+    --backgroundColor: #151515;
+    --accent: #170F31;
+}
+
+/*-----------------------------------------------------*/
+
+/*---------------------Animation-----------------------*/
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    } to {
+        background-position: -200% center;
+    }
+}
+
+/*-----------------------------------------------------*/
+
+/*---------------------Main CSS-----------------------*/
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    align-items: stretch;
+    background-color: var(--backgroundColor);
+    color: var(--divText);
+    margin: 0;
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0;
+}
+
+main {
+    height: 100%;
+    background-color: var(--accent); 
+    text-align: center;
+}
+
+.headerBar {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.topBarElement {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.operatingSystemMenu {
+    display: inline-flex;
+    align-items: baseline;
+}
+
+.systemButton {
+    width: 10rem;
+    border-color: #FAFAFA;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 4%;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.funkyBorder {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+        to right,
+        var(--purple),
+        var(--violet),
+        var(--pink),
+        var(--purple)
+    );
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+/*----------------------------------------------------*/
+
+/*-----------------Links that need CSS----------------*/
+a:link {
+    text-decoration: none;
+    color:white;
+}
+
+a:visited {
+    text-decoration: none;
+    color:white;
+}
+
+a:hover {
+    text-decoration: underline;
+    color:white;
+}
+
+a:active {
+    text-decoration: underline;
+    color:white
+}
+
+/*-----------------------------------------------------*/
+
+/*---------------------Images-----------------------*/
+
+.image {
+    position: absolute;
+    margin-left: 4.5%;
+    margin-top: 10px;
+    float: left;
+    max-width: 90px;
+}
+
+.buttonImage {
+    max-height: 100px;
+    margin: 5px;
+}
+
+/*-----------------------------------------------------*/
+
+/*---------------------Footer Content-----------------------*/
+
+.pageBottom {
+    width: 100%;
+    background-color: var(--backgroundColor);
+    color: white;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.footerImage {
+    max-width: 90px;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+
+.contactImage {
+    max-width: 40px;
+}
+
+/*----------------------------------------------------------*/
+
+/*
+This means that whenever this site is run on a desktop
+or on a bigger width screen, the margin and background
+box shadow are added
+*/
+@media (min-width: 767px) {
+    .headerBar {
+        padding-top: 0px;
+    }
+
+    main {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 15px;
+        margin-left: 23%;
+        margin-right: 23%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .topBarElement {
+        display: inline-block;
+        margin-top: 7px;
+        vertical-align: middle;
+    }
+
+    .image {
+        display: flex;
+        position: absolute;
+        margin-left: 4.5%;
+        margin-top: 10px;
+        float: left;
+    }
+
+    .socialLinks {
+        display: inline-flex;
+        margin-top: -50px;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        align-content: center;
+    }
+}
