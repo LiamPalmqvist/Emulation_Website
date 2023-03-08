@@ -33,6 +33,7 @@ body {
     height: 100%;
     align-items: stretch;
     background-color: var(--backgroundColor);
+    background-image:url("../images/background.jpg");
     color: var(--divText);
     margin: 0;
     font-family: "roboto", sans-serif;
@@ -43,27 +44,27 @@ body {
 
 main {
     height: 100%;
-    background-color: var(--accent); 
     text-align: center;
 }
 
 .headerBar {
-    padding-top: 10px;
-    padding-bottom: 20px;
-    justify-content: center;
+    margin-top: 2%;
+    vertical-align: middle;
     text-align: center;
     width: 100%;
+    height: fit-content;
 }
 
 .topBarElement {
     font-family: "roboto", sans-serif;
-    font-weight: 400;
+    font-weight: bold;
     font-style: normal;
 }
 
 .operatingSystemMenu {
     display: inline-flex;
     align-items: baseline;
+    padding-top: 5%
 }
 
 .systemButton {
@@ -78,7 +79,7 @@ main {
     margin-bottom: 5px;
 }
 
-.funkyBorder {
+.funkyText {
     animation: background-pan 3s linear infinite;
     background: linear-gradient(
         to right,
@@ -122,9 +123,10 @@ a:active {
 /*---------------------Images-----------------------*/
 
 .image {
+    display: flex;
     position: absolute;
+    margin-top: -10px;
     margin-left: 4.5%;
-    margin-top: 10px;
     float: left;
     max-width: 90px;
 }
@@ -140,11 +142,12 @@ a:active {
 
 .pageBottom {
     width: 100%;
-    background-color: var(--backgroundColor);
     color: white;
     display: inline-block;
     text-align: center;
     padding-bottom: 10px;
+    position: absolute;
+    bottom: 0;
 }
 
 .footerImage {
@@ -169,27 +172,10 @@ box shadow are added
         padding-top: 0px;
     }
 
-    main {
-        padding-left: 25px;
-        padding-right: 25px;
-        padding-bottom: 15px;
-        margin-left: 23%;
-        margin-right: 23%;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
     .topBarElement {
         display: inline-block;
         margin-top: 7px;
         vertical-align: middle;
-    }
-
-    .image {
-        display: flex;
-        position: absolute;
-        margin-left: 4.5%;
-        margin-top: 10px;
-        float: left;
     }
 
     .socialLinks {
