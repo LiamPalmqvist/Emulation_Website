@@ -80,6 +80,7 @@ main {
 }
 
 .funkyText {
+    
     animation: background-pan 3s linear infinite;
     background: linear-gradient(
         to right,
@@ -133,7 +134,7 @@ a:active {
 
 .buttonImage {
     max-height: 100px;
-    margin: 5px;
+    margin: 20px;
 }
 
 /*-----------------------------------------------------*/
